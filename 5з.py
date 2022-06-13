@@ -1,8 +1,8 @@
+
 import re
 def is_palindrome(string):
     string2 = re.sub('[!@#$\n-.,]', '',string)
     string2 = ''.join((x for x in string2 if not x.isdigit()))
-
 
 
     s = string2.upper()
@@ -18,8 +18,7 @@ def is_palindrome(string):
            break
         elif li_str[l] == li_str[r]:
             return'YES'
-            break
-        else:
             l = l + 1
             r = r - 1
-#print(is_palindrome(""))
+
+print(is_palindrome("Madam, I'm Adam"))
