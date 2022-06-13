@@ -9,7 +9,7 @@ class Student:
         self.grades = grades
 
     def greeting(self):
-        return 'Hello, I am Student', self
+        return 'Hello, I am Student', self.fullname
 
     def mean_grade(self):
         mean = numpy.average(self.grades)
