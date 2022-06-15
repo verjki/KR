@@ -50,7 +50,7 @@ def is_palindrome(string):
             li_str.append(k)
     l = 0
     r = len(li_str) - 1
-    while l < r:
+    while l <= r:
         if li_str[l] != li_str[r]:
            return 'NO'
            break
