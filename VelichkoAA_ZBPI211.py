@@ -38,26 +38,16 @@ def bin_search(li, element):
         return mid
 #5
 def is_palindrome(string):
-    string2 = re.sub('[!@#$\n-.,]', '',string)
-    string2 = ''.join((x for x in string2 if not x.isdigit()))
-
-
-
+    string2 = ''.join(filter(lambda x: x.isalpha(), string))
     s = string2.upper()
-    li_str = []
-    for k in s:
-        if s.isalpha() == True:
-            li_str.append(k)
     l = 0
-    r = len(li_str) - 1
-    while l <= r:
-        if li_str[l] != li_str[r]:
-           return 'NO'
-           break
-        elif li_str[l] == li_str[r]:
-            return'YES'
-            l = l + 1
-            r = r - 1
+    r = len(s) - 1
+    while l != len(s) // 2:
+        if s[l] != s[r]:
+            return "NO"
+        l += 1
+        r -= 1
+    return "YES"
 #6
 def calculate(f):
     f2 = open(f, 'r')
